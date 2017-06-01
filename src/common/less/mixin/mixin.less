@@ -1,0 +1,25 @@
+.border-1px(@color) {
+  position: relative;
+  &::after {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    display: block;
+    bottom: 0;
+    border-top: 1px solid @color;
+    content: ''
+  }
+}
+.border-none{
+  &::after{
+    display: none;
+  }
+}
+
+.bg-image(@url) {
+  background-image: url("@{url}@2x.png");
+  // 默认的图片为2x的图片 但是最小dpr为3的用3x的图片
+  @media (-webkit-min-device-pixel-ratio: 3),(-webkit-min-device-pixel-ratio: 3) {
+    background-image: url("@{url}@3x.png");
+  }
+}
