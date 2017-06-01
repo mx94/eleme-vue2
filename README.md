@@ -1,4 +1,4 @@
-# takeout
+# eleme-vue2
 
 > A Vue.js project
 
